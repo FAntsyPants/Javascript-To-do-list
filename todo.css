@@ -1,7 +1,26 @@
 body {
 	font-family: sans-serif;
+	
+}
+
+
+li {
+
+	list-style-position: inside;
 }
 
 button {
+	margin:5px;
+	justify-content: right;
 	font-family: sans-serif;
+}
+
+
+
+.done {
+	margin: 5px;
+}
+
+li {
+
 }
