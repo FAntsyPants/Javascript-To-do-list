@@ -1,6 +1,13 @@
 //THIS IS A FUNCTION TO ADD A NEW ITEM TO THE "TO DO" LIST
 function ListItem() {
 var submit = prompt("WHAT ARE YOU GOING TO PUT OFF UNTIL TOMORROW?");
+ if (submit == null){
+ 	return;
+ }
+ if (submit == ""){
+ 	return;
+ }
+
 //CREATING THE VARIABLES FOR THE LISTS
 var todo = document.getElementById("todo");
 var done = document.getElementById("done");
@@ -9,9 +16,13 @@ var done = document.getElementById("done");
 var newitem = document.createElement("li");
 //WRITING WHAT WILL GO IN THAT ELEMENT
 var itemtext = document.createTextNode(submit);
+
 // ADDING CHILD  TEXT NODE "test" TO ITS PARENT, </li>
 var fullitem = newitem.appendChild(itemtext);
 // ADDING CHILD "newitem" TO ITS PARENT
+
+
+  
 //
 todo.appendChild(newitem);
 //FUNCTION TO CREATE "DONE" BUTTON
