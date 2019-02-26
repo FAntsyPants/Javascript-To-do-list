@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+	 <meta charset="UTF-8"> 
 	<title>To Do List</title>
 	<link rel="stylesheet" type="text/css" href="todo.css">
+	<!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="todo.js"></script>
+
 </head>
 <body>
 
+<div class= "app">
+	<div class= "group">
+		<h1>To Do:</h1>
+		<form action="#" onsubmit ="formEntry();return false">
+			To do: <input id="task"  type = "text"  name ="task" ><button id = "submit" type ="submit" onclick="formEntry()">FUCK</button>
+		</form>
+		<!-- <button id = "submit" onclick="ListItem()">
+			GET SOMETHING DONE
+		</button>  -->
 
-<h1>To Do:</h1>
-<button id = "submit" onclick="ListItem()">
-	GET SOMETHING DONE
-</button> 
-
-	<ul id = "todo">
-	</ul>
-
-<h1>
-	Done:
-</h1>
-	<ol id = "done">
-		
-	</ol>
+			<ul id = "todo">
+			</ul>
+		</div>
+	<div class= "group">
+		<h1>
+			Done:
+		</h1>
+			<ol id = "done">
+				
+			</ol>
+	</div>
+</div>
 
 </body>
+
 </html>
-<script type="text/javascript" src="todo2.js"></script>

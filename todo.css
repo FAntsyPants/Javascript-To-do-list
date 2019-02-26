@@ -1,25 +1,40 @@
 body {
 	font-family: sans-serif;
-	
+
 }
 
-
-li {
-
-	list-style-position: inside;
+.app {
+	background-color:  #C9D0E0;
+	padding:10px;
+	margin:auto;
+	max-width: 250px;
 }
 
-button {
+.group {
+	border:3px solid #5D6F98;
+	margin: 3px;
+	background-color: lightblue;
+}
+.group ul,ol {
+
+	text-align: left;
+	justify-content: left;
+
+}
+
+.group  button {
 	margin:5px;
 	justify-content: right;
 	font-family: sans-serif;
+	
 }
-
 
 
 #done {
 	text-decoration: line-through;
 }
+
+
 
 li {
 
