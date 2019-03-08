@@ -1,67 +1,18 @@
-//THIS IS A FUNCTION TO ADD A NEW ITEM TO THE "TO DO" LIST
-function ListItem() {
-var submit = prompt("WHAT ARE YOU GOING TO PUT OFF UNTIL TOMORROW?");
- if (submit == null){
- 	return;
- }
- if (submit == ""){
- 	return;
- }
-
-//CREATING THE VARIABLES FOR THE LISTS
-var todo = document.getElementById("todo");
-var done = document.getElementById("done");
-
-//CREATING NEW ELEMENT
-var newitem = document.createElement("li");
-//WRITING WHAT WILL GO IN THAT ELEMENT
-var itemtext = document.createTextNode(submit);
-
-// ADDING CHILD  TEXT NODE "test" TO ITS PARENT, </li>
-var fullitem = newitem.appendChild(itemtext);
-// ADDING CHILD "newitem" TO ITS PARENT
+const todo = document.getElementById("todo");
+const done = document.getElementById("done");
 
 
-  
-//
-todo.appendChild(newitem);
-//FUNCTION TO CREATE "DONE" BUTTON
-	 function button(){
-	 	const newbutton = document.createElement("button");
-	 	//ADDING HTML CLASS
-	 	newbutton.classList.add("done");
-	 	//CREATING "DONE" TEXT IN BUTTON
-	 	let buttontext = document.createTextNode("Done");
-	 	//ADDING BUTTON TO LIST ITEM
-	 	newbutton.appendChild(buttontext);
-	 	//PUTTING IT ALL TOGETHER
-	 	newitem.appendChild(newbutton);
-
-	 	//REMOVING THE ITEM FROM THE LIST
-	 	newbutton.onclick  = function move(){
-	 		//CLONING THE TEXT BEFORE MOVING IT TO "DONE"
-	 		const clone = fullitem.cloneNode(itemtext);
-	 		//DELETING FROM "TODO"
-	 		newitem.remove();
-	 		//CREATING LI 
-	 		const doneitem = document.createElement("li");
-	 		const donetext = document.createTextNode(submit);
-	 		const fulldone = doneitem.appendChild(donetext);
-//adding button
-	 		var final = done.appendChild(doneitem);
-	 		var clear = document.createElement("button");
-	 		let buttontext = document.createTextNode("Clear");
-	 		clear.appendChild(buttontext);
+const form = document.getElementById("form");
+form.addEventListener("submit", function(event){
+	event.preventDefault();
+	const textarea = document.getElementById("textarea");
+	const task_text = textarea.value;
+	let li_node = document.createElement("li");
+	let text_node = document.createTextNode(task_text);
+	li_node.appendChild(text_node);
+	todo.appendChild(li_node).classList.add("item_todo");
 
 
-	 		clear.appendChild;
-	 		final.appendChild(clear)
-	 		clear.onclick = function remove(){
-	 				final.remove();
-	 		;
-	 		}
-	 		}
-	 	 }
+});
 
-button();
-}
+
